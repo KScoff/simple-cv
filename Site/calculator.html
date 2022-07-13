@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <title>JavaScript Calculator</title>
+</head>
+<body>  <!--Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Calculator</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cv.html">CV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calculator.html">Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="list_via_browse.php">Browse</a>
+      </li>
+    </ul>
+    <a class="btn btn-primary" href="login.php" role="button">Admin Login</a>
+  </div>
+</nav>
+<br>
+<div class="container">     <!--container for input area -->
+  <div class="text-center">
+   <input type=text id="input1">
+   <span id="op">+</span>
+   <input type=text id="input2">
+   &nbsp;=&nbsp;
+   <span id="res"></span>
+   </div>
+ </div>
+ <br>
+ <div class="container">    <!--container for operator buttons-->
+   <div class="text-center">
+     <section id="operator">
+     <button onclick="plus()" id="plus">+</button>
+     <button onclick="minus()" id="minus">-</button>
+     <button onclick="times()" id="times">&times;</button>
+     <button onclick="divide()" id="divide">&divide;</button><br>
+     </section>
+   </div>
+ </div>
+<br>
+<div class="container">   <!--container for text enlargement area-->
+  <div class="text-center">
+    <h3> Button Enlargement </h3>
+    <button onclick="fontsize150pc()" id="times">150%</button>
+    <button onclick="fontsize200pc()" id="times">200%</button>
+    <button onclick="fontsize250pc()" id="times">250%</button>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+                                  //these functions take the values from the two inputs and performs the desired operation outputting the result to the "res" div tag location
+function plus() {
+  var input1 = parseInt(document.getElementById('input1').value);
+  var input2 = parseInt(document.getElementById('input2').value);
+  var result = input1 + input2;
+  document.getElementById("res").innerHTML = result;
+}
+function minus() {
+  var input1 = parseInt(document.getElementById('input1').value);
+  var input2 = parseInt(document.getElementById('input2').value);
+  var result = input1 - input2;
+  document.getElementById("res").innerHTML = result;
+}
+function times() {
+  var input1 = parseInt(document.getElementById('input1').value);
+  var input2 = parseInt(document.getElementById('input2').value);
+  var result = input1 * input2;
+  document.getElementById("res").innerHTML = result;
+}
+function divide() {
+  var input1 = parseInt(document.getElementById('input1').value);
+  var input2 = parseInt(document.getElementById('input2').value);
+  var result = input1 / input2;
+  document.getElementById("res").innerHTML = result;
+}
+
+                            //functions for enlargement of the operator button font size
+function fontsize150pc() {
+  plusfont = document.getElementById( 'plus' );
+  minusfont = document.getElementById( 'minus' );
+  timesfont = document.getElementById( 'times' );
+  dividefont = document.getElementById( 'divide' );
+  plusfont.style.fontSize = "150%" ;
+  minusfont.style.fontSize = "150%" ;
+  timesfont.style.fontSize = "150%" ;
+  dividefont.style.fontSize = "150%" ;
+}
+function fontsize200pc() {
+  plusfont = document.getElementById( 'plus' );
+  minusfont = document.getElementById( 'minus' );
+  timesfont = document.getElementById( 'times' );
+  dividefont = document.getElementById( 'divide' );
+  plusfont.style.fontSize = "200%" ;
+  minusfont.style.fontSize = "200%" ;
+  timesfont.style.fontSize = "200%" ;
+  dividefont.style.fontSize = "200%" ;
+}
+function fontsize250pc() {
+  plusfont = document.getElementById( 'plus' );
+  minusfont = document.getElementById( 'minus' );
+  timesfont = document.getElementById( 'times' );
+  dividefont = document.getElementById( 'divide' );
+  plusfont.style.fontSize = "250%" ;
+  minusfont.style.fontSize = "250%" ;
+  timesfont.style.fontSize = "250%" ;
+  dividefont.style.fontSize = "250%" ;
+}
+</script>
+</html>
